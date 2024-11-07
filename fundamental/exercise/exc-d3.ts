@@ -6,15 +6,15 @@ let lim = 10;
 let reslt;
 for (let i = 1; i <= lim; i++) {
   reslt = nu * i;
-  //   console.log(`${nu} x ${i} = ${reslt}`);
+  console.log(`${nu} x ${i} = ${reslt}`);
 }
 
 /* check whether a string is a palindrome or not */
 /* str = "madam" */
 
 let kt: string = "babab";
-
 let hsln = "";
+
 for (let i = 0; i < kt.length; i++) {
   if (kt.charAt(kt.length - 1 - i) == kt.charAt(i)) {
     hsln += `${kt.charAt(i)}`;

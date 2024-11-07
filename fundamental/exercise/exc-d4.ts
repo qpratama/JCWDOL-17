@@ -1,30 +1,40 @@
 /* Day 4 - Exercise 1 */
 
-let numbr = 5;
+let numbr = 4;
 let nom = "";
-
-for (var i1 = 1; i1 < numbr; i1++) {
-  for (var j1 = 0; j1 < i1; j1++) {
-    nom += `0${i1 + j1} `;
+let agk = 1;
+for (var i1 = 0; i1 < numbr; i1++) {
+  for (var j1 = 0; j1 <= i1; j1++) {
+    if (agk > 9) {
+      nom += agk;
+    } else {
+      nom += "0" + agk + " ";
+    }
+    agk++;
   }
   nom += "\n";
 }
 
 console.log(nom);
+/*
+0 01 
+1 
+*/
 
 /* Day 4 - Exercise 2 */
 
-let limits = 0;
+let limits = 15;
 var n1 = 1;
 while (n1 <= limits) {
-  if (n1 == 3) {
-    console.log("Fizz");
-  } else if (n1 == 5) {
-    console.log("Buzz");
-  } else if (n1 % 15 == 0) {
+  if (n1 % 3 == 0 && n1 % 5 == 0) {
     console.log("FizzBuzz");
+  } else if (n1 % 3 == 0) {
+    console.log("Fizz");
+  } else if (n1 % 5 == 0) {
+    console.log("Buzz");
+  } else {
+    console.log(n1);
   }
-  console.log(n1);
   n1++;
 }
 
@@ -33,6 +43,7 @@ while (n1 <= limits) {
 var weight = 100;
 var height = 180;
 var BMI = weight / Math.pow(height / 100, 2);
+var toPres = BMI.toPrecision(3);
 
 if (BMI < 18.5) {
   console.log(`${BMI} = less weight`);
@@ -48,10 +59,8 @@ if (BMI < 18.5) {
 
 /* Day 4 - Exercise 4 */
 
-const arry: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const evennumb: number[] = arry.filter((number) =>
-  !(number % 2) ? true : false
-);
+let arry1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evennumb = arry1.filter((number) => (!(number % 2) ? true : false));
 
 console.log(evennumb);
 
